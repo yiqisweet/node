@@ -22,7 +22,6 @@
 // };
 // o.test();
 
-
 //this指向不可更改
 //var birth = 1998;
 //var o = {
