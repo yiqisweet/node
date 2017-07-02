@@ -50,7 +50,7 @@ ani.toString()
 //
 //
 
-
+//
 // class Animal{
 //     constructor(name = '名字',spe = '物种'){
 //         this.name = name;
@@ -58,49 +58,43 @@ ani.toString()
 //     }
 //
 //     sayHi(){
-//         console.log('hello',this.name,this.spe);
+//         console.log('hi',this.name,this.spe);
 //     }
 // }
 //
 // class Cat extends Animal{
 //     constructor(name,spe){
-//         super(name,spe)
+//         super(name,spe);
 //     }
 //
-//     sayHello(){
-//         console.log('child');
-//         //子级要用super去调用父级实例方法
-//         super.sayHi()
-//     }
 // }
 //
 // let cat = new Cat('Tom','猫');
-// cat.sayHello()
-//
+// cat.sayHi()
 
 //静态方法
-// class Foo{
-//     constructor(name = '默认'){
-//         this.name = name;
-//     }
-//     static sayHi(){
-//         console.log('hi',this.name)
-//     }
-// }
-// //静态方法，是不可以用实例调出来的，所以要调用静态方法，必须用类调
-// class Bar extends Foo{
-//     constructor(name){
-//         super(name)
-//     }
-// // 继承时，如果子级想要调用父级静态方法，那么调用的环境必须也是静态方法，在实例方法中不可以调用静态
-//     //实例也一样，在静态方法中，不可以调用实例
-//     static sayHello(){
-//         console.log('child')
-//         super.sayHi()
-//     }
-// }
-//
-// Bar.sayHello()
+class Foo{
+    constructor(name = '默认'){
+        this.name = name;
+    }
+    static sayHi(){
+        console.log('hi',this.name);
+    }
+}
+//静态方法，是不可以用实例调出来的，所以要调用静态方法，必须用类调
+class Bar extends Foo{
+    constructor(name){
+        super(name);
+    }
+// 继承时，如果子级想要调用父级静态方法，那么调用的环境必须也是静态方法，在实例方法中不可以调用静态
+    //实例也一样，在静态方法中，不可以调用实例
+    static sayHello(){
+        console.log('child')
+        super.sayHi();
+    }
+}
+
+Bar.sayHello()
 
 // class Abc{
 //     constructor(name = '默认'){

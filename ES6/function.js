@@ -23,17 +23,19 @@
 // o.test();
 
 //this指向不可更改
-//var birth = 1998;
-//var o = {
-  //  birth : 1999,
-  //  test:function(year){
+var birth = 1998;
+var o = {
+   birth : 1999,
+   test:function(year){
 
-   //     var fun = function(y){
-    //        console.log(this.birth)
-    //        return y - this.birth
-   //     }
-    //    return fun(year)
-   // }
-//}
 
-//console.log(o.test(2000))
+       let fun = (y) =>{
+           console.log(this.birth);
+           console.log(y);
+           return y - this.birth;
+       }
+       return fun.call({birth:2001},year);
+   }
+}
+
+console.log(o.test(2000))
