@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="logo">click me</div>
+<script>
+    //防止内存泄漏，它的键所对应的对象，可能会在将来消失。
+    let myElement = document.getElementById('logo');
+    let myWeakmap = new WeakMap();
+
+    myWeakmap.set(myElement, {timesClicked: 0});
+
+    myElement.addEventListener('click', function() {
+        let logoData = myWeakmap.get(myElement);
+        logoData.timesClicked++;
+        console.log(logoData.timesClicked)
+        if( logoData.timesClicked == 3){
+            myElement.remove(myElement.selectedIndex)
+        }
+    }, false);
+
+</script>
+</body>
+</html>
