@@ -19,6 +19,7 @@
         logoData.timesClicked++;
         console.log(logoData.timesClicked)
         if( logoData.timesClicked == 3){
+          //当满足条件删除引用时，等待下次垃圾回收机制触发时，就会自动回收对应的引用
             myElement.remove(myElement.selectedIndex)
         }
     }, false);
