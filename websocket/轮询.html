@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="content">
+
+    </div>
+    <script type="text/javascript">
+
+      var xhr = new XMLHttpRequest;
+
+      setInterval(function(){
+        xhr.open('GET','http://172.168.0.29:3030/data.json');
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState === 4 && xhr.status === 200){
+              document.getElementById('content').innerHTML = xhr.responseText;
+          }
+        }
+        xhr.send();
+      },2000)
+    </script>
+  </body>
+</html>

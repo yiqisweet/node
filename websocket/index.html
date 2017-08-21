@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="content_wrap">
+        <span class="content"></span>
+    </div>
+<div class="">
+    <input type="text" id="msg" name="" value="">
+    <button type="button" name="button" onClick="send()">发送</button>
+</div>
+<script type="text/javascript">
+
+  var ws =new WebSocket('ws://localhost:3080');
+
+  ws.onopen = function(){
+      console.log('链接成功')
+  }
+
+  ws.onmessage = function(msg){
+      document.querySelector('.content').innerHTML = msg.data
+  }
+  function send(){
+    var msg =   document.querySelector('#msg').value;
+    ws.send(msg);
+  }
+</script>
+  </body>
+</html>
