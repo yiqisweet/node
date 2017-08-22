@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+     Hello Express
+
+     <div class="">
+        <div class="">
+          <input type="text" id="uname" name="" value="">
+        </div>
+        <div class="">
+          <input type="text" id="upwd" name="" value="">
+        </div>
+        <div class="">
+          <button type="button" id="submitBtn" name="button">登录</button>
+        </div>
+     </div>
+
+     <script src="jquery.js" charset="utf-8"></script>
+     <script type="text/javascript">
+
+
+          $('#submitBtn').click(function(){
+            var uname = $('#uname').val(),
+                upwd = $('#upwd').val();
+              $.ajax({
+                url:'/login',
+                type:'post',
+                data:{
+                  uname : uname,
+                  upwd :  upwd
+                },
+                success:function(data){
+                    console.log(data);
+                    if(data.code === '20000'){
+                      alert('登陆成功')
+                    }
+                }
+              })
+
+
+          });
+     </script>
+  </body>
+</html>
