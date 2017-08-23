@@ -4,16 +4,16 @@
  * @Email:  mynameislxmax@outlook.com
  * @Filename: hello.js
  * @Last modified by:   Randy
- * @Last modified time: 2017-08-23 10:20:42
+ * @Last modified time: 2017-08-23 09:00:07
  */
+ 'use strict';
 
-var hello_getRandom = require('./hello_getRandom')
+var hello_getRandom = require('./hello_getRandom');
 
 var hello = {};
 
 hello.hello = function(req,res){
-  var random = hello_getRandom()
-      res.send(""+random);
-}
+      res.send(""+hello_getRandom());
+};
 
 module.exports = hello;

@@ -4,7 +4,7 @@
  * @Email:  mynameislxmax@outlook.com
  * @Filename: index.js
  * @Last modified by:   Randy
- * @Last modified time: 2017-08-23 01:09:53
+ * @Last modified time: 2017-08-23 08:59:38
  */
 
 'use strict';
@@ -25,26 +25,33 @@ router.get('/',function(req,res){
 router.route('/login').get(function(req,res){
     res.render('login',{
       title : 'login'
-    })
+    });
 }).post(function(req,res){
-
-   if(req.body.uname && req.body.upwd){
+  var uname = req.body.uname;
+  var StudentsModel = global.dbHandel.getModel('students');
+  StudentsModel.find({name:uname},function(err,doc){
+    if(doc){
         res.send({msg:'OK',code:'20000'});
-   };
+    }else{
+        res.send({msg:'NO',code:'40004'});
+    }
+  });
+
+
 });
 
 //是请求也是路径
 router.route('/register').get(function(req,res){
     res.render('register',{
       title:'register'
-    })
-}).post(function(req,res){
-    console.log(req.body)
+    });
+}).post(function(req){
+    console.log(req.body);
 });
 router.get('/home',function(req,res){
     res.render('home',{
       title : 'home'
-    })
+    });
 });
 
 module.exports = router;

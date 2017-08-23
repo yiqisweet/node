@@ -4,7 +4,7 @@
  * @Email:  mynameislxmax@outlook.com
  * @Filename: app.js
  * @Last modified by:   Randy
- * @Last modified time: 2017-08-23 09:35:43
+ * @Last modified time: 2017-08-23 08:54:23
  */
 
 
@@ -13,6 +13,13 @@ var app = express();
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var path = require('path');
+var mongoose = require('mongoose');
+
+mongoose.Promise = require('bluebird');
+global.dbHandel = require('./database/dbHandel');
+global.db = mongoose.connect('mongodb://localhost:27017/school',{
+  useMongoClient:true
+});
 //静态
 app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.urlencoded({extended:true}));
