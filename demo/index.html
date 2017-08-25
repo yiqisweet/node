@@ -82,6 +82,7 @@
       }
   });
 
+  //离开input框，自动填充该内容
 $('.tbody_update').delegate('#update', 'blur', function(event) {
   let newTxt = $(this).val(),
       thisId = $(this).parent().siblings('th').attr('id'),
