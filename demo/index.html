@@ -73,6 +73,7 @@
        })
   });
 
+  //点击内容，填充input框
   $('.tbody_update').delegate('tr td span', 'click', function(event) {
       if(!$(this).parent().find('.delete_item').length > 0){
         let old_td = $(this).text() || $(this).val();
