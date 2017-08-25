@@ -113,6 +113,7 @@ $('.tbody_update').delegate('#update', 'blur', function(event) {
       // })
   }
 });
+  //点击删除，获取当前对象，进行ajax查询，如果成功就删除
 $('.tbody_update').delegate('.delete_item', 'click', function(event) {
     let removeId = $(this).parent().siblings('th').attr('id');
     console.log(removeId);
