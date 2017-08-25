@@ -17,6 +17,7 @@
         xhr.onreadystatechange = function(){
           if(xhr.readyState === 4 && xhr.status === 200){
               document.getElementById('content').innerHTML = xhr.responseText;
+              //自调开始
               query();
           }
         }
