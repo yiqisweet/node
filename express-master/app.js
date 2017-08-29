@@ -3,8 +3,8 @@
  * @Date:   2017-08-23 09:31:04
  * @Email:  mynameislxmax@outlook.com
  * @Filename: app.js
- * @Last modified by:   Randy
- * @Last modified time: 2017-08-23 08:54:23
+ * @Last modified by:
+ * @Last modified time: 2017-08-28T17:27:25+08:00
  */
 
 
@@ -15,7 +15,7 @@ var routes = require('./routes/index');
 var path = require('path');
 var mongoose = require('mongoose');
 
-mongoose.Promise = require('bluebird');
+mongoose.Promise = require('bluebird')
 global.dbHandel = require('./database/dbHandel');
 global.db = mongoose.connect('mongodb://localhost:27017/school',{
   useMongoClient:true
