@@ -22,6 +22,7 @@ router.get('/',function(req,res){
     });
 });
 
+//get也是post
 router.route('/login').get(function(req,res){
     res.render('login',{
       title : 'login'
