@@ -10,6 +10,7 @@
 
 var express = require('express');
 var app = express();
+//获取参数包
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var path = require('path');
