@@ -12,7 +12,7 @@
 //链接数据库
 
 var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
+mongoose.Promise = require('bluebird'); //承诺证书
 var db = mongoose.connect('mongodb://127.0.0.1:27017',{
   useMongoClient : true
 }).then(function(db){
