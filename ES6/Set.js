@@ -59,6 +59,7 @@
 // for(let i of s.entries()){
 //   console.log(i)
 // }
+//遍历方法
 // s.forEach(function(item){
 //   console.log(item)
 // })
