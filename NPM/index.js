@@ -11,4 +11,5 @@
 
 var system = require('./lib/system');
 
+//对外暴露
 module['exports'] = system
