@@ -8,7 +8,7 @@
  */
 
 'use strice';
-
+//操作数据库
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 var db =  mongoose.connect('mongodb://127.0.0.1:27017',{
