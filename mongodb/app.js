@@ -80,7 +80,7 @@ PersonModle.find({
       {age : 19}
     ]
 },function(err,doc){
-
+//回调
 })
 
 //$exists  如果设置为true ，就筛选带有name的数据，反之是筛选不带有name的数据
