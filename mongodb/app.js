@@ -9,6 +9,7 @@
 
 'use strice';
  
+//链接数据库
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
