@@ -56,9 +56,9 @@ router.get('/home',function(req,res){
 });
 
 router.route('/test').get(function(req,res){
-
+    res.send('test');
 }).post(function(req){
     console.log(req.body);
-})
+});
 
 module.exports = router;
