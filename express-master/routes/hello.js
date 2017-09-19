@@ -12,6 +12,7 @@ var hello_getRandom = require('./hello_getRandom');
 
 var hello = {};
 
+//单独暴露接口，在接口内调用其他
 hello.hello = function(req,res){
       res.send("随机数是:"+hello_getRandom());
 };
