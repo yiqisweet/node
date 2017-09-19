@@ -6,10 +6,10 @@
 
 
 //例二、不会类型转换
-// let s = new Set();
-// [1,2,3,4,5,6,7,'1','2','3'].map(item => {s.add(item)})
-//
-// console.log(...s)
+ let s = new Set();
+ [1,2,3,4,5,6,7,'1','2','3'].map(item => {s.add(item)})
+
+ console.log(...s)
 
 
 // 例三，可接受类似数组
@@ -59,6 +59,7 @@
 // for(let i of s.entries()){
 //   console.log(i)
 // }
+//遍历方法
 // s.forEach(function(item){
 //   console.log(item)
 // })

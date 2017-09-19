@@ -8,18 +8,11 @@
  */
 
 'use strice';
+ 
+//链接数据库
 
 var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-var db =  mongoose.connect('mongodb://127.0.0.1:27017',{
-  useMongoClient : true
-}).then(function(db){
-
-})
-
-
-var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
+mongoose.Promise = require('bluebird'); //承诺证书
 var db = mongoose.connect('mongodb://127.0.0.1:27017',{
   useMongoClient : true
 }).then(function(db){
@@ -87,7 +80,7 @@ PersonModle.find({
       {age : 19}
     ]
 },function(err,doc){
-
+//回调
 })
 
 //$exists  如果设置为true ，就筛选带有name的数据，反之是筛选不带有name的数据

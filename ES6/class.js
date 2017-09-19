@@ -113,15 +113,15 @@
 
 // ---------------------- es5 中的静态和实例 -------------------
 
-function Point(){
+//function Point(){
     //这个叫做工厂模式
-    this.name = 2;//实例
-}
-Point.abc = 1; //静态方法
+//    this.name = 2;//实例
+//}
+//Point.abc = 1; //静态方法
 
 //这个就是原型模式
-Point.prototype.a = 1; //实例
+//Point.prototype.a = 1; //实例
 
-var p = new Point();
-console.log(p.a)
-console.log(p.name)
+//var p = new Point();
+//console.log(p.a)
+//console.log(p.name)
