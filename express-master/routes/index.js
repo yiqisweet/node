@@ -13,8 +13,9 @@ var express = require('express');
 var router = express.Router();  //express 路由
 
 var hello = require('./hello');
-
+var miss = require('./miss');
 router.get('/hello',hello.hello);
+router.get('/miss',miss.miss);
 
 router.get('/',function(req,res){
     res.render('index',{
