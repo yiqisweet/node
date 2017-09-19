@@ -13,7 +13,7 @@ var hello_getRandom = require('./hello_getRandom');
 var hello = {};
 
 hello.hello = function(req,res){
-      res.send(""+hello_getRandom());
+      res.send("随机数是:"+hello_getRandom());
 };
 
 module.exports = hello;
