@@ -54,4 +54,10 @@ router.get('/home',function(req,res){
     });
 });
 
+router.route('/test').get(function(req,res){
+
+}).post(function(req){
+    console.log(req.body);
+})
+
 module.exports = router;

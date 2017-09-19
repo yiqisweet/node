@@ -4,7 +4,7 @@
  * @Email:  mynameislxmax@outlook.com
  * @Filename: app.js
  * @Last modified by:
- * @Last modified time: 2017-08-28T17:27:25+08:00
+ * @Last modified time: 2017-08-29T21:12:52+08:00
  */
 
 
@@ -31,7 +31,6 @@ app.use('/',routes);
 app.use('/login',routes);
 app.use('/register',routes);
 app.use('/home',routes);
-
 
 
 
