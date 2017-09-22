@@ -11,5 +11,10 @@
     3、exports
     4、module
     5、require
-    这五个请参照下一级文件
+    这五个请参照son下
+ */
+/*
+    buffer
+
+    请参照同级文件名称
  */
