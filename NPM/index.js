@@ -9,6 +9,7 @@
 
 
 
+//引用接口
 var system = require('./lib/system');
 
 //对外暴露
