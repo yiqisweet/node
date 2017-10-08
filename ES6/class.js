@@ -1,18 +1,21 @@
 
 //分为静态，实例方法， 实例所有的方法都是存在prototype里，类不允许创建属性，类名字第一个字母大写
 //类没有提前声明这么一说，表达式可以进行自执行类
-// class Point{  //类声明
-//     constructor(x = 0, y = 0){
-//         this.x = x;
-//         this.y = y;
-//     }
-//     toString(){
-//         console.log('hello',this.x,this.y)
-//     }
-// }
-//
-// let ani = new Animal(1,3);
-// ani.toString()
+class Point{  //类声明
+    user = []
+    constructor(x = 0, y = 0){
+        this.x = x;
+        this.y = y;
+    }
+    toString(){
+        user.push('1');
+        console.log('hello',this.x,this.y)
+        console.log(user);
+    }
+}
+
+let ani = new Point(1,3);
+ani.toString()
 
 // 自执行类表达式
 // var point = new class{
