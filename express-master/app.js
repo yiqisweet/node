@@ -16,6 +16,7 @@ var routes = require('./routes/index');
 var path = require('path');
 var mongoose = require('mongoose');
 
+//承诺书
 mongoose.Promise = require('bluebird')
 global.dbHandel = require('./database/dbHandel');
 global.db = mongoose.connect('mongodb://localhost:27017/school',{
