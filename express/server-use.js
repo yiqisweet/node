@@ -41,7 +41,6 @@ app.use(function(req,res,next){
   next();
 });
 
-
 app.get('/',function(req,res){
   console.log(req.host);
   console.log(req.params);

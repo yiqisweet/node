@@ -19,6 +19,9 @@ app.engine('html',require('ejs').__express); //把ejs后缀替换html
 app.set('view engine','html');//视图引擎后缀
 app.set('views',__dirname+'/views'); //设置访问路径
 
+app.engine('html',require('ejs').__express);
+app.set('view engine',html);
+app.set('views',__dirname+'/views')
 
 
 app.get('/',function(req,res){
